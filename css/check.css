@@ -1,0 +1,99 @@
+.container-two {
+    /* font-family: 'Bitter', serif; */
+    /* font-family: 'Gaegu', sans-serif;
+    font-family: 'Hedvig Letters Serif', serif; */
+    /* font-family: 'Nanum Pen Script', cursive; */
+    display: flex;
+    flex-wrap: wrap;
+    
+    gap: 16px;
+    width: 50%;
+    margin-top: 8%;
+    margin-left: 32%;
+    margin-bottom: 5%;
+    justify-items: center;
+    
+} 
+
+.three h1 {
+    /* font-family: 'Bitter', serif;
+    font-family: 'Hedvig Letters Serif', serif; */
+
+    font-size: 55px;
+    font-weight: 500;
+}
+.three h2 {
+    /* font-family: 'Bitter', serif;
+    font-family: 'Hedvig Letters Serif', serif; */
+
+    font-size: 20px;
+    font-weight: 100;
+    animation: blink 1s linear infinite;
+
+}
+@keyframes blink {
+    0% {opacity: 1;}
+    50% {opacity: 0;}
+    100% {opacity: 1;}
+}
+.checkbox {
+    font-size: 22px;
+    justify-items: center;
+    flex-basis: 40%;
+    box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
+}
+
+.checkbox input {
+    position: absolute;
+    left: -100%;
+}
+
+.checkbox label svg {
+    display: none;
+}
+
+.checkbox input:checked ~ label svg {
+    display: block
+}
+
+.checkbox label {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.hack-checkbox {
+    height: 30px;
+    width: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+    border: 1px solid rgb(86, 86, 86);
+    color: rgb(0, 0, 0);
+}
+#myButton  {
+    position: relative;
+    width: 7%;
+    top: 0px;
+    
+    font-size: 30px;
+    border-radius: 4rem;
+    background-color: rgb(65, 64, 64);
+    color: white;
+
+}
+#myText {
+    position: relative;
+    top: 30px;
+    font-size: 30px;
+}
+button {
+    font-family: 'Bitter', serif;
+    font-family: 'Gaegu', sans-serif;
+    font-family: 'Hedvig Letters Serif', serif;
+    font-family: 'Nanum Pen Script', cursive;
+    font-family: 'VT323', monospace;;
+}

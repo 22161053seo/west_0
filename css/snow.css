@@ -1,0 +1,25 @@
+body #snow {
+	height: 100vh;
+	
+	position: relative;
+}
+
+body #snow > div {
+    z-index: 4;
+	position: absolute;
+	top: 0;
+	left: calc(var(--position) - 20%);
+	width: calc(var(--size) * 15px);
+	aspect-ratio: 1;
+	background: radial-gradient(white, transparent 66%);
+	animation: var(--fallDuration) snowFall linear forwards;
+}
+
+@keyframes snowFall {
+	to {
+		top: 100%;
+		transform: translateX(calc(var(--cWidth) * var(--fallSlideStrength) / 8));
+	}
+}
+
+   

@@ -1,0 +1,92 @@
+.card {
+    
+    perspective: 1000px;
+    display: inline-block;
+    margin-top: 50px;
+    margin: 10px;
+    text-align: center;
+}
+
+.card .card-inner {
+    width: 250px;
+    height: 250px;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.5s;
+    overflow: hidden;
+    border-radius: 8rem;
+}
+
+.card:hover .card-inner {
+    transform: rotateY(180deg);
+}
+
+.card .card-front,
+.card .card-back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.card .card-front img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card .card-back {
+    background-color: rgb(255, 219, 225);
+    transform: rotateY(0deg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    opacity: 1;
+    transition: opacity 0.5s;
+}
+
+.card:hover .card-back {
+    opacity: 0;
+}
+
+.card .card-back p {
+    font-size: 30px;
+    padding-top: 30px;
+    color: #000;
+}
+
+.four {
+    width: 100%;
+    position: absolute;
+    text-align: center;
+    justify-content: center;
+    top: 300%;
+    bottom: 0;
+}
+
+.four h1 {
+    font-size: 55px;
+    font-weight: 400;
+}
+
+.four ul {
+    position: absolute;
+    display: flex;
+    list-style: none;
+    justify-items: center;
+    text-align: center;
+    margin-top: 60px;
+    width: 100%;
+    left: 0%;
+}
+
+.four ul li {
+    font-size: 30px;
+    margin-top: 50px;
+    margin-left: 12.9%;
+}

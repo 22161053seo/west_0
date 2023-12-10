@@ -1,0 +1,69 @@
+/* body {
+            font-size: 18px;
+            line-height: 28px;
+            scroll-behavior: smooth;
+            
+        } */
+
+.seven {
+
+    width: 100%;
+    position: absolute;
+    text-align: center;
+    justify-content: center;
+    top: 630%;
+    bottom: 0;
+}
+
+.seven h1 {
+    letter-spacing: -15px;
+    color: white;
+    text-align: center;
+    font-size: 300px;
+    font-weight: 800;
+    line-height: 200px;
+}
+
+.seven .MainContainer {
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+    perspective: 1px;
+    /* transform-style: preserve-3d; */
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+/* Chrome, Safari, Edge */
+.seven .MainContainer::-webkit-scrollbar {
+    display: none;
+}
+
+.seven .ContentContainer {
+    position: relative;
+    display: block;
+    background-color: white;
+    z-index: 1;
+    padding-bottom: 60px;
+}
+.seven .Content {
+    max-width: 750px;
+    margin: 0 auto;
+    padding: 75px 0;
+}
+
+.seven div p {
+    margin: 75px 0;
+}
+
+.seven .ParallaxContainer {
+    display: flex;
+    flex: 1 0 auto;
+    position: relative;
+    z-index: -1;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    transform: translateZ(-1px) scale(2);
+    background-color: rgba(250, 228, 216, 0);
+}
