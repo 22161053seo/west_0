@@ -13,7 +13,7 @@
 }
 
 .five h1 {
-    font-size: 55px;
+    font-size: 40px;
     font-weight: 500;
 }
 .siderr {
@@ -44,20 +44,24 @@ height: 510px;
 }
 #ccc {
     background-position: absolute;
-    margin-left: 57px;
+    margin-left: 7px;
     
 }
 #bbb {
     background-position: absolute;
     margin-top: -24px;
-    margin-left: 56px;
+    margin-left: 6px;
 }
 #ddd {
     background-position: absolute;
     margin-top: -30px;
-    margin-left: 56px;
+    margin-left: 5px;
 }
-
+#eee {
+    background-position: absolute;
+    margin-top: 0;
+    margin-left: -70px;
+}
 .ss-container .ss-item {
     background-position: center;
     background-size: contain;
@@ -152,9 +156,9 @@ height: 510px;
 
 .ss-container h1 {
     padding-top: 30px;
-    margin-right: 30%;
+    margin-right: 25px;
     text-align: right;
-    font-size: 27px;
+    font-size: 20px;
 }
 /* body {
     overflow: hidden;

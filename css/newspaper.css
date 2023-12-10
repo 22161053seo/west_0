@@ -10,7 +10,7 @@
     left: 50%;
     transform: translate(-50%, -30%);
     justify-content: center;
-    animation: scale-up 0.5s linear;
+    animation: scale-up 2.5s linear;
 }
 
 .one .newsletter {
@@ -19,7 +19,7 @@
     padding: 5px;
     border: 1px solid black;
     transform: rotate(-5deg);
-    animation: rotate 0.5s linear 1;
+    animation: rotate 0.8s linear 2;
     position: relative;
 }
 
