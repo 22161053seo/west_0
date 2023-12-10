@@ -1,0 +1,784 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="css/newspaper.css">
+    <link rel="stylesheet" href="css/belt.css">
+    <link rel="stylesheet" href="css/check.css">
+    <link rel="stylesheet" href="css/final.css">
+    <link rel="stylesheet" href="css/point.css">
+    <link rel="stylesheet" href="css/gallery.css">
+    <link rel="stylesheet" href="css/coordinate.css">
+    <script src="js/coordinate.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bitter&family=Gaegu:wght@300;700&family=Hedvig+Letters+Serif:opsz@12..24&family=Nanum+Pen+Script&display=swap"
+        rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bitter&family=Gaegu:wght@300;700&family=Hedvig+Letters+Serif:opsz@12..24&family=Nanum+Pen+Script&family=VT323&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/cat.css">
+    <script src="js/cat.js"></script> 
+    <link rel="stylesheet" href="css/footer.css">
+    <title>Document</title>
+    <style>
+       
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Bitter', serif;
+font-family: 'Gaegu', sans-serif;
+font-family: 'Hedvig Letters Serif', serif;
+font-family: 'Nanum Pen Script', cursive;
+font-family: 'VT323', monospace;
+            overflow-x: hidden;
+            justify-content: center;
+            align-items: center;
+            background-color: rgb(255, 219, 225);
+        }
+
+        header {
+            width: 100%;
+            height: 50px;
+        }
+
+        header:hover {
+            background-color: rgb(0, 0, 0);
+            color: white;
+            transform: ease 0.5s;
+        }
+
+        #logo {
+            padding-top: 10px;
+            justify-content: center;
+            text-align: center;
+            font-size: 30px;
+            /* font-family: 'Times New Roman', Times, serif; */
+            font-style: italic;
+        }
+
+        .three {
+            width: 100%;
+            position: absolute;
+            text-align: center;
+            justify-content: center;
+            top: 0;
+            bottom: 0;
+            transform: translate(-0%, 200%);
+        }
+
+
+
+        .snowflake {
+            position: fixed;
+            background: radial-gradient(white, transparent 86%);
+            border-radius: 50%;
+            animation-name: fall;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+        }
+
+        /* 눈송이가 떨어지는 애니메이션 */
+        @keyframes fall {
+            from {
+                transform: translateY(-100vh);
+            }
+
+            to {
+                transform: translateY(100vh);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <p id="logo">west0</p>
+    </header>
+    <!--컨텐츠 -->
+    <div id="snow"></div>
+    <script>
+        // 눈송이 생성 함수
+        function createSnowflake() {
+            const snowflake = document.createElement('div');
+            snowflake.classList.add('snowflake');
+            snowflake.style.left = Math.random() * 100 + 'vw';
+            snowflake.style.animationDuration = Math.random() * 3 + 2 + 's';
+            snowflake.style.opacity = Math.random();
+            snowflake.style.height = Math.random() * 26 + 10 + 'px';
+            snowflake.style.width = snowflake.style.height;
+
+            document.body.appendChild(snowflake);
+
+            // 일정 시간 후 눈송이 요소 제거
+            setTimeout(() => {
+                snowflake.remove();
+            }, 5000);
+        }
+
+        // 0.1초마다 눈송이 생성
+        setInterval(createSnowflake, 100);
+    </script>
+
+    <section class="one">
+        <div class="container">
+            <div class="newsletter">
+                <section class="name">
+                    <p>WEST0</p>
+                </section>
+
+                <section class="info">
+                    <p>DAILY NEWS</p>
+                    <p>35¢</p>
+                </section>
+
+                <section class="title">
+                    <h1>
+                        <span>A new leading brand has appeared in the fashion market.</span>
+                        <span></span>
+                    </h1>
+                </section>
+
+                <section class="content">
+                    <article class="left-side">
+                        <h2>
+                            <span>What brand is it?</span>
+                            <span>Captivate everyone's heart</span>
+                        </h2>
+                        <div>
+                            <p>West0, a hot brand these days, will hold a pop-up event on the 4th floor of 00 Department Store in Seoul.
+                                 It's been crowded since early in the morning The store was filled with unique and attractive clothes. 
+                                 It's my first time doing an offline event, but there are so many people.
+                                 Hahaha. Everyone, get cool clothes Looking at the reviews I heard the fit is so pretty. I'm curious, too</p>
+                            <p>I hope it will be posted on SNS in a few years I really want to create a haunting shopping mall that people visit consistently!
+                                 I hope everyone will graduate from school and reach their various dreams - Our programming and friends' exams are coming up soon.
+                                  Everyone, work hard. - West0</p>
+                        </div>
+                    </article>
+                    <article class="right-side">
+                        <img src="img/main.jpg" alt="">
+                        <p>https://www.pinterest.co.kr/pin/3588874695707724/</p>
+                    </article>
+                </section>
+            </div>
+        </div>
+    </section>
+    <section class="two">
+        <div class="cover">
+            <p class="first-parallel"></p>
+        </div>
+
+        <div class="cover">
+            <p class="second-parallel"></p>
+        </div>
+
+        <div class="cover">
+            <p class="third-parallel"></p>
+        </div>
+
+        <script>
+            const pTag1 = document.querySelector('.first-parallel')
+            const pTag2 = document.querySelector('.second-parallel')
+            const pTag3 = document.querySelector('.third-parallel')
+
+
+            const textArr1 = "Have you heard of our brand?".split(' ')
+            const textArr2 = 'Awesome case Top scarf pants shorts skirt jacket suede jacket padded coat vest'.split(' ')
+            const textArr3 = "I can finish all the styling here too? Can I dress fashionably too? wowwwww".split(' ')
+
+
+
+            let count1 = 0
+            let count2 = 0
+            let count3 = 0
+
+
+            initTexts(pTag1, textArr1)
+            initTexts(pTag2, textArr2)
+            initTexts(pTag3, textArr3)
+
+
+            function initTexts(element, textArray) {
+                textArray.push(...textArray)
+                for (let i = 0; i < textArray.length; i++) {
+                    element.innerText += `${textArray[i]}\u00A0\u00A0\u00A0\u00A0`
+                }
+            }
+
+            function marqueeText(count, element, direction) {
+                if (count > element.scrollWidth / 3) {
+                    element.style.transform = `translate3d(0, 0, 0)`
+                    count = 0
+                }
+                element.style.transform = `translate3d(${direction * count}px, 0, 0)`
+
+                return count
+            }
+
+            function animate() {
+                count1++
+                count2++
+                count3++
+
+
+                count1 = marqueeText(count1, pTag1, -1)
+                count2 = marqueeText(count2, pTag2, 1)
+                count3 = marqueeText(count3, pTag3, 1)
+
+
+                window.requestAnimationFrame(animate)
+            }
+
+            function scrollHandler() {
+                count1 += 15
+                count2 += 15
+                count3 += 15
+
+            }
+
+            window.addEventListener('scroll', scrollHandler)
+            animate() 
+        </script>
+    </section>
+
+    <section class="three">
+        <h1>Please check the desired items</h1>
+
+        <div class="container-two">
+            <div class="checkbox">
+                <input type="checkbox" id="item-one">
+                <label for="item-one">
+                    <span class="hack-checkbox">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path fill="currentColor" d="M20 6l-11 11-5-5 1.5-1.5L9 14l8.5-8.5L20 6z" />
+                        </svg>
+
+                    </span>
+                    <span class="hack-label">
+                        Pretty silhouette
+                    </span>
+                </label>
+            </div>
+
+
+            <div class="checkbox">
+                <input type="checkbox" id="item-two">
+                <label for="item-two">
+                    <span class="hack-checkbox">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path fill="currentColor" d="M20 6l-11 11-5-5 1.5-1.5L9 14l8.5-8.5L20 6z" />
+                        </svg>
+                    </span>
+                    <span class="hack-label">
+                        Fit that looks huge
+                    </span>
+                </label>
+            </div>
+
+
+            <div class="checkbox">
+                <input type="checkbox" id="item-three">
+                <label for="item-three">
+                    <span class="hack-checkbox">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path fill="currentColor" d="M20 6l-11 11-5-5 1.5-1.5L9 14l8.5-8.5L20 6z" />
+                        </svg>
+                    </span>
+                    <span class="hack-label">
+                        Trendy
+                    </span>
+                </label>
+            </div>
+
+
+            <div class="checkbox">
+                <input type="checkbox" id="item-four">
+                <label for="item-four">
+                    <span class="hack-checkbox">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path fill="currentColor" d="M20 6l-11 11-5-5 1.5-1.5L9 14l8.5-8.5L20 6z" />
+                        </svg>
+                    </span>
+                    <span class="hack-label">
+                        Appropiate size
+                    </span>
+                </label>
+            </div>
+
+
+            <div class="checkbox">
+                <input type="checkbox" id="item-five">
+                <label for="item-five">
+                    <span class="hack-checkbox">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path fill="currentColor" d="M20 6l-11 11-5-5 1.5-1.5L9 14l8.5-8.5L20 6z" />
+                        </svg>
+                    </span>
+                    <span class="hack-label">
+                        Slime-looking fit
+                    </span>
+                </label>
+            </div>
+
+            <div class="checkbox">
+                <input type="checkbox" id="item-six">
+                <label for="item-six">
+                    <span class="hack-checkbox">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path fill="currentColor" d="M20 6l-11 11-5-5 1.5-1.5L9 14l8.5-8.5L20 6z" />
+                        </svg>
+                    </span>
+                    <span class="hack-label">
+                        Luxury
+                    </span>
+                </label>
+            </div>
+
+            <div class="checkbox">
+                <input type="checkbox" id="item-seven">
+                <label for="item-seven">
+                    <span class="hack-checkbox">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path fill="currentColor" d="M20 6l-11 11-5-5 1.5-1.5L9 14l8.5-8.5L20 6z" />
+                        </svg>
+                    </span>
+                    <span class="hack-label">
+                        Good quality
+                    </span>
+                </label>
+            </div>
+
+
+            <div class="checkbox">
+                <input type="checkbox" id="item-eight">
+                <label for="item-eight">
+                    <span class="hack-checkbox">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path fill="currentColor" d="M20 6l-11 11-5-5 1.5-1.5L9 14l8.5-8.5L20 6z" />
+                        </svg>
+                    </span>
+                    <span class="hack-label">
+                        Pretty colors
+                    </span>
+                </label>
+            </div>
+        </div>
+        <button id="myButton">finish</button>
+        <h2 id="myText"></h2>
+        <script>
+          document.getElementById("myButton").addEventListener("click", function() {
+            document.getElementById("myText").innerHTML = "We will provide you with the clothing you checked!!";
+        });
+        
+        </script>
+        <!-- <h2 class=""></h2> -->
+    </section>
+
+
+
+    
+<section class="four">
+  <h1>Point</h1>
+
+  <ul>
+    <li class="card">
+      <div class="card-inner">
+        <div class="card-front">
+          <img src="img/kitty.jpg" alt="">
+        </div>
+        <div class="card-back">
+          <p>#Lovely</p>
+        </div>
+      </div>
+    </li>
+    <li class="card">
+      <div class="card-inner">
+        <div class="card-front">
+          <img src="img/simple.jpg" alt="">
+        </div>
+        <div class="card-back">
+          <p>#Simple basic</p>
+        </div>
+      </div>
+    </li>
+    <li class="card">
+      <div class="card-inner">
+        <div class="card-front">
+          <img src="img/daily.jpg" alt="">
+        </div>
+        <div class="card-back">
+          <p>#Daily</p>
+        </div>
+      </div>
+    </li>
+  </ul>
+</section>
+
+    <section class="five">
+        <h1>Let's coordinate together</h1>
+        <div class="siderr">
+            <div id="backgroundfixed"><img src="img/aaaa.png" alt=""></div>
+            <div class="ss-container">
+                <div class="ss-item ss-loop active" id="ccc" style="background-image: url(img/ccc.png) ;">
+                    <h1>chic</h1>
+                </div>
+                <div class="ss-item ss-loop" id="bbb" style="background-image: url('img/bbb.png');">
+                    <h1>Y2k</h1>
+                </div>
+                <div class="ss-item ss-loop" id="ddd" style="background-image: url('img/ddd.png');">
+                    <h1>Messy</h1>
+                </div>
+                <!-- <div class="ss-item ss-loop" id="eee" style="background-image: url('img/eee.png');">
+                    <h1>꾸안꾸</h1>
+                </div> -->
+                <!-- <div class="ss-item ss-loop" style="background-image: url('img/ddd.png');">
+                    <h1>4</h1>
+                </div> -->
+            </div>
+        </div>
+
+        <script>
+
+
+            scrollSlide({
+                container: ".ss-container",
+                item: ".ss-item",
+                animType: "ss-move-up",
+                duration: 1,
+                delay: 0,
+                uncutMove: true
+            })
+
+            function scrollSlide(args) {
+                //args.container, args.item, args.animType, args.duration, args.delay, args.uncutMove
+                const scrollContainerEle = document.querySelector(args.container);
+                const scrollItems = Array.from(document.querySelectorAll(`${args.container} ${args.item}`));
+
+                let allowAnimation = true;
+                let allowAnimationTimeout;
+
+                // NOTE:
+                // INNER FUNCTIONS DECLARATION
+                function addAnimationClasses() {
+                    scrollItems.forEach((item) => {
+                        item.classList.add(args.animType);
+                    })
+                }
+
+                function addLoppAnimClasses() {
+                    let activeItem = scrollItems.find((item) => {
+                        return item.classList.contains('active');
+                    })
+
+                    let nextItem = scrollItems[scrollItems.indexOf(activeItem) + 1];
+                    let prevItem = scrollItems[scrollItems.indexOf(activeItem) - 1];
+
+                    if (!nextItem) {
+                        nextItem = scrollItems[0];
+                    };
+
+                    if (!prevItem) {
+                        prevItem = scrollItems[scrollItems.length - 1];
+                    };
+                    let itemsProceed = 0;
+                    console.log('%c Remove Classes', 'background-color: red;')
+                    scrollItems.forEach((item) => {
+                        itemsProceed++;
+
+                        item.classList.remove('ss-move-prev')
+                        item.classList.remove('ss-move-next')
+                        console.log(itemsProceed + " | " + scrollItems.length)
+
+                        if (itemsProceed === scrollItems.length) {
+                            nextItem.classList.add('ss-move-next');
+                            prevItem.classList.add('ss-move-prev');
+
+                        }
+                    })
+                }
+
+
+                function addAnimationDuration() {
+                    scrollItems.forEach((item) => {
+                        item.style.transitionDuration = `${args.duration}s`;
+                        addAnimationDelay(item)
+                    })
+                }
+
+                function addAnimationDelay(item) {
+                    item.style.transitionDelay = `${args.delay}s`;
+                }
+
+                function stopScrollAnim() {
+                    if (allowAnimation) { allowAnimation = false }
+                    allowAnimationTimeout = setTimeout(() => {
+                        allowAnimation = true;
+
+                        scrollItems.forEach((item) => {
+                            item.classList.remove('ss-moving');
+                        })
+                    }, (args.duration + args.delay) * 1000)
+                }
+
+                function changeScrollSlide(moveDown) {
+                    console.log(moveDown)
+                    let activeItem = scrollItems.find((item) => {
+                        return item.classList.contains('active');
+                    })
+                    let nextItem;
+
+                    if (moveDown) {
+                        nextItem = scrollItems[scrollItems.indexOf(activeItem) + 1]
+                    } else {
+                        nextItem = scrollItems[scrollItems.indexOf(activeItem) - 1]
+                    }
+
+                    if (nextItem) {
+                        activeItem.classList.add('ss-moving');
+                        nextItem.classList.add('ss-moving');
+                        activeItem.classList.remove('active');
+                        nextItem.classList.add('active');
+
+                        if (args.uncutMove) { addLoppAnimClasses() }
+
+                    } else {
+                        activeItem.classList.add('ss-moving');
+                        activeItem.classList.remove('active');
+
+                        if (moveDown) {
+                            scrollItems[0].classList.add('ss-moving');
+                            scrollItems[0].classList.add('active');
+
+                            if (args.uncutMove) { addLoppAnimClasses() }
+                        } else {
+                            scrollItems[scrollItems.length - 1].classList.add('ss-moving');
+                            scrollItems[scrollItems.length - 1].classList.add('active');
+
+                            if (args.uncutMove) { addLoppAnimClasses() }
+                        }
+                    }
+                }
+
+                // NOTE:
+                // INNER FUNCTION CALLS
+                addAnimationClasses()
+                if (args.uncutMove) { addLoppAnimClasses() }
+                addAnimationDuration()
+
+
+                return (function () {
+                    let eventType;
+                    let isFirefox = navigator.userAgent.toLowerCase().indexOf('firefox') > -1;
+                    let isIe = /MSIE|Trident/.test(window.navigator.userAgent);
+                    if (isFirefox) {
+                        eventType = 'DOMMouseScroll';
+                    } else if (isIe) {
+                        eventType = 'mousewheel';
+                    } else {
+                        eventType = 'wheel';
+                    }
+                    scrollContainerEle.addEventListener(eventType, function (event) {
+                        let scrollTop = scrollContainerEle.scrollTop,
+                            scrollHeight = scrollContainerEle.scrollHeight,
+                            height = scrollContainerEle.clientHeight;
+
+                        let delta = (event.wheelDelta) ? event.wheelDelta : -(event.detail || 0);
+                        // console.log(`scrollTop ${screenTop}  height ${height} scrollHeight ${scrollHeight}`)
+                        if ((delta > 0 && scrollTop - delta <= 0) || (delta < 0 && scrollTop + height >= scrollHeight - 1)) {
+                            if (delta > 0) {
+
+                                if (allowAnimation) {
+                                    stopScrollAnim()
+                                    changeScrollSlide(false)
+                                }
+
+                            } else {
+                                if (allowAnimation) {
+                                    stopScrollAnim()
+                                    changeScrollSlide(true);
+                                }
+                            }
+                            event.preventDefault();
+                        } else {
+                            if (delta < 0) {
+                                if (allowAnimation) {
+                                    stopScrollAnim()
+                                    changeScrollSlide(true);
+                                }
+                            }
+                            event.preventDefault();
+                        }
+                    })
+                }())
+            }
+
+            scrollSlide({
+                container: ".ss-container",
+                item: ".ss-item",
+                animType: "ss-move-up",
+                duration: 1,
+                delay: 0,
+                uncutMove: true
+            })
+
+        </script>
+    </section>
+
+
+    <section class="six">
+        <h1>Best</h1>
+        <ul class="curved-grid">
+            <li><a href="sub.html"><img src="img/miumiujaket.png" alt=""></a></li>
+            <li><a href="sub2.html"><img src="img/blackjaket.png" alt=""></a></li>
+            <li><a href="sub3.html"><img src="img/blackpants.png" alt=""></a></li>
+            <li><a href="sub4.html"><img src="img/ballerina.png" alt=""></a></li>
+            <li><a href="sub5.html"><img src="img/shirt.png" alt=""></a></li>
+            <li><a href="sub6.html"><img src="img/onepiece.png" alt=""></a></li>
+            <li><a href="sub7.html"><img src="img/longonpiece.png" alt=""></a></li>
+            <li><a href="sub8.html"><img src="img/cardigan.png" alt=""></a></li>
+            <li><a href="sub12.html"><img src="img/boots.png" alt=""></a></li>
+            <li><a href="sub10.html"><img src="img/denim.png" alt=""></a></li>
+            <li><a href="sub11.html"><img src="img/shortpants.png" alt=""></a></li>
+            <li><a href="sub9.html"><img src="img/bini.png" alt=""></a></li>
+
+
+        </ul>
+
+        <script>
+            // let's backfill the animation timeline for browsers that need it
+            window.addEventListener(
+                "scroll",
+                () => {
+                    document.body.style.setProperty(
+                        "--scroll",
+                        window.pageYOffset / (document.body.offsetHeight - window.innerHeight)
+                    );
+                },
+                false
+            );
+        </script>
+    </section>
+    <section class="seven">
+        <div class="MainContainer">
+
+            <div class="ParallaxContainer">
+                <h1>
+                    West0!
+                </h1>
+            </div>
+
+            <div class="ContentContainer">
+                <div class="Content">
+                    <p>저희 사이트를 방문해주신 여러분들! <br>반갑습니다
+                    </p>
+
+                    <p>안녕하세요 west0팀 입니다. <br>
+                        항상 좋은 품질의 옷과 그에 맞는 합리적인 가격 도매시장과 연결된 다수의 중국공장,
+                         내공장들을 직접 경험하여 수많은 시행착오를 겪고 단가가 저렴할 시 품질이 좋지않고 <br>
+                         품질이 좋을 시 단가가 너무 높다는 고정 관념을 깨기 위해 신중히 꾸준하게 공부해<br>
+                        결과적으로 더 합리적인 가격으로 양질인 제품의 생산을 이루겠습니다. <br>
+                        웨스트영은 저희 이름 서영을 따 만들었습니다.<br> 제 이름을 걸고 하는 만큼 좋은 품질과 완성도 높은 디자인과 마감,<br>
+                         그에 맞는 합리적인 단가로 자신있게 보여드리겠습니다.<br>감사합니다.
+                    </p>
+                </div>
+
+
+                <section class="nine">
+                <div class="outer_wrapper">
+                    <div class="wrapper">
+
+                        <div class="cat_wrapper">
+                            <div class="cat first_pose">
+                                <div class="cat_head">
+                                    <svg x="0px" y="0px" width="100%" height="100%" viewBox="0 0 76.4 61.2">
+                                        <polygon class="eyes"
+                                            points="63.8,54.1 50.7,54.1 50.7,59.6 27.1,59.6 27.1,54.1 12.4,54.1 12.4,31.8 63.8,31.8 " />
+                                        <path d="M15.3,45.9h5.1V35.7h-5.1C15.3,35.7,15.3,45.9,15.3,45.9z M45.8,56.1V51H30.6v5.1H45.8z M61.1,35.7H56v10.2h5.1
+                              V35.7z M10.2,61.2v-5.1H5.1V51H0V25.5h5.1V15.3h5.1V5.1h5.1V0h5.1v5.1h5.1v5.1h5.1v5.1c0,0,15.2,0,15.2,0v-5.1h5.1V5.1H56V0h5.1v5.1
+                              h5.1v10.2h5.1v10.2h5.1l0,25.5h-5.1v5.1h-5.1v5.1H10.2z" />
+                                    </svg>
+
+                                </div>
+                                <div class="body">
+                                    <svg x="0px" y="0px" width="100%" height="100%" viewBox="0 0 91.7 40.8">
+                                        <path class="st0"
+                                            d="M91.7,40.8H0V10.2h5.1V5.1h5.1V0h66.2v5.1h10.2v5.1h5.1L91.7,40.8z" />
+                                    </svg>
+
+                                    <div class="tail">
+                                        <svg x="0px" y="0px" width="100%" height="100%" viewBox="0 0 25.5 61.1">
+                                            <polygon class="st0" points="10.2,56 10.2,50.9 5.1,50.9 5.1,40.7 0,40.7 0,20.4 5.1,20.4 5.1,10.2 10.2,10.2 10.2,5.1 15.3,5.1 
+                                15.3,0 25.5,0 25.5,10.2 20.4,10.2 20.4,15.3 15.3,15.3 15.3,20.4 10.2,20.4 10.2,40.7 15.3,40.7 15.3,45.8 20.4,45.8 20.4,50.9 
+                                25.5,50.9 25.5,61.1 15.3,61.1 15.3,56 " />
+                                        </svg>
+                                    </div>
+                                </div>
+
+                                <div class="front_legs">
+                                    <div class="leg one">
+                                        <svg x="0px" y="0px" width="100%" height="100%" viewBox="0 0 14 30.5">
+                                            <polygon points="15.3,30.5 5.1,30.5 5.1,25.4 0,25.4 0,0 15.3,0 " />
+                                        </svg>
+                                    </div>
+                                    <div class="leg two">
+                                        <svg x="0px" y="0px" width="100%" height="100%" viewBox="0 0 14 30.5">
+                                            <polygon points="15.3,30.5 5.1,30.5 5.1,25.4 0,25.4 0,0 15.3,0 " />
+                                        </svg>
+                                    </div>
+                                </div>
+
+                                <div class="back_legs">
+                                    <div class="leg three">
+                                        <svg x="0px" y="0px" width="100%" height="100%" viewBox="0 0 14 30.5">
+                                            <polygon points="15.3,30.5 5.1,30.5 5.1,25.4 0,25.4 0,0 15.3,0 " />
+                                        </svg>
+                                    </div>
+                                    <div class="leg four">
+                                        <svg x="0px" y="0px" width="100%" height="100%" viewBox="0 0 14 30.5">
+                                            <polygon points="15.3,30.5 5.1,30.5 5.1,25.4 0,25.4 0,0 15.3,0 " />
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="ground"></div>
+
+                </div>
+            </section>
+
+            </div>
+        </div>
+
+
+
+
+
+
+    </section>
+
+    <footer>
+        <div>@west0</div>
+
+        <ul>
+            <li>FAQs</li>
+            <li>Privacy</li>
+            <li>Terms of Use</li>
+            <li>Instagram</li>
+        </ul>
+
+    </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bitter&family=Gaegu:wght@300;700&family=Hedvig+Letters+Serif:opsz@12..24&family=Nanum+Pen+Script&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bitter&family=Gaegu:wght@300;700&family=Hedvig+Letters+Serif:opsz@12..24&family=Nanum+Pen+Script&family=VT323&display=swap"
+        rel="stylesheet">
+
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Bitter', serif;
+            font-family: 'Gaegu', sans-serif;
+            font-family: 'Hedvig Letters Serif', serif;
+            font-family: 'Nanum Pen Script', cursive;
+            font-family: 'VT323', monospace;
+            overflow-x: hidden;
+            justify-content: center;
+            align-items: center;
+            background-color: rgb(255, 219, 225);
+        }
+
+        header {
+
+            position: fixed;
+            width: 100%;
+            height: 50px;
+        }
+
+        header:hover {
+            background-color: rgb(0, 0, 0);
+            color: white;
+            transform: ease 0.5s;
+        }
+
+        #logo {
+            padding-top: 10px;
+            justify-content: center;
+            text-align: center;
+            font-size: 30px;
+            font-style: italic;
+        }
+
+        a {
+            color: black;
+            text-decoration: none;
+        }
+
+        header a:hover {
+            color: white;
+            text-decoration: none;
+        }
+
+        #scroll-img {
+            width: 50%;
+            position: absolute;
+            float: left;
+        }
+
+        .scroll-img img {
+            /* display: inline-block; */
+            width: 50%;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .detail {
+            left: 15%;
+            top: 13%;
+            text-align: center;
+            width: 50%;
+            position: fixed;
+            float: right;
+        }
+
+        .detail h2 {
+            position: fixed;
+            top: 13%;
+            width: 50%;
+            left: 54%;
+            text-align: left;
+            float: right;
+            font-weight: 400;
+            font-size: 30px;
+        }
+
+        .detail h5 {
+            position: fixed;
+            top: 20%;
+            width: 50%;
+            left: 55%;
+            text-align: left;
+            float: right;
+            font-size: 16px;
+
+        }
+
+        .color-book {
+            position: absolute;
+            margin-top: 80px;
+            left: 80%;
+            width: 40px;
+            height: 40px;
+            background-color: rgb(162, 85, 40);
+            border-radius: 50%;
+        }
+
+        #myButton {
+
+            position: fixed;
+            width: 520px;
+            height: 40px;
+            top: 50%;
+            left: 53.8%;
+            font-size: 18px;
+            /* border-radius: 4rem; */
+            background-color: rgb(0, 0, 0);
+            color: rgb(255, 255, 255);
+
+        }
+
+        #myText {
+            font-size: 20px;
+            position: absolute;
+            top: 200px;
+            transition: opacity 0.5s;
+        }
+
+        .fade-out {
+            opacity: 0;
+        }
+
+        .product {
+            position: fixed;
+            top: 63%;
+            width: 50%;
+            left: 54%;
+        }
+
+        #newBox {
+            position: fixed;
+            right: -300px;
+            width: 100px;
+            /* height: 100vh; */
+            background-color: #f1f1f1;
+            transition: right 0.5s ease;
+        }
+
+        #myBox {
+            overflow: scroll;
+            padding: 25px 25px 25px 25px;
+            display: none;
+            position: fixed;
+            top: 0;
+            right: 0;
+            width: 520px;
+            height: 100%;
+            background-color: rgb(255, 255, 255);
+            transform: translateX(100%);
+            transition: transform 0.5s ease-out;
+        }
+
+
+
+        #myBox.show {
+            display: block;
+            transform: translateX(0);
+        }
+
+        #myBox h3 {
+            margin-bottom: -10px;
+            font-size: 22px;
+            font-weight: 600;
+        }
+
+        #myBox p {
+            font-size: 15px;
+        }
+
+        #myBox ul {
+            padding-left: 25px;
+        }
+
+        #myBox li {
+            font-size: 15px;
+            padding-top: 5px;
+
+        }
+
+        /* #myBox_1 {
+            overflow: scroll;
+            padding: 25px 25px 25px 25px;
+            display: none;
+            position: fixed;
+            top: 0;
+            right: 0;
+            width: 520px;
+            height: 100%;
+            background-color: rgb(255, 255, 255);
+            transform: translateX(100%);
+            transition: transform 0.5s ease-out;
+        }
+
+        
+
+        #myBox_1.show {
+            display: block;
+            transform: translateX(0);
+        }
+
+        #myBox_1 h3 {
+            margin-bottom: -40px;
+            font-size: 22px;
+            font-weight: 600;
+        }
+
+        #myBox_1 p {
+            font-size: 15px;
+        }
+        #myBox_1 ul {
+            padding-left: 25px;
+        }
+        #myBox_1 li {
+            font-size: 15px;
+            padding-top: 5px;
+            
+        } */
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <p id="logo"><a href="index.html"> west0</a></p>
+    </header>
+
+    <section class="scroll-img">
+        <div class="container">
+            <img src="img/nosub12.png" alt="">
+            <img src="img/nosub12_1.png" alt="">
+            <img src="img/nosub12_2.png" alt="">
+            <img src="img/nosub12_3.png" alt="">
+            <img src="img/nosub12_4.png" alt="">
+
+        </div>
+    </section>
+    <section class="detail">
+        <h2>퓌메 가죽 부츠</h2>
+        <h5>￦ 240,000 <br><br>색상: 시에나</h5><br><br>
+        <div class="color-book"></div>
+        <button id="myButton">장바구니에 추가하기</button>
+        <h2 id="myText"></h2>
+        <script>
+            document.getElementById("myButton").addEventListener("click", function () {
+                var myText = document.getElementById("myText");
+                myText.innerHTML = "장바구니에 상품을 담았습니다.";
+                setTimeout(function () {
+                    myText.classList.add("fade-out");
+                }, 1000); // 2초 후에 실행
+            });
+        </script>
+    </section>
+
+    <section>
+        <p class="product" onclick="toggleBox()">제품 상세</p>
+
+        <div id="myBox">
+            <h3>제품 상세정보</h3><br><br>
+            <p>균일하지 않은 방식으로 왁스를 도포하는 정교한 공정의 결과물인 
+                특별한 투톤 뉘앙스 효과가 특징인 가죽 부츠입니다.
+                 시어링 안감이 겨울 감성을 더하고 미우미우 로고로 아이코닉한 룩이 완성됩니다.
+                <br><br>
+            <ul>
+                <li>제품 코드: 5W971D_3LN0_F0038_F_D055</li>
+                <li>시어링 안감</li>
+                <li>스크린 프린트 로고</li>
+                <li>부츠 레그: 38cm</li>
+
+                <li>EVA 솔</li>
+                <li>힐 높이: 55cm</li>
+                <li>가죽 인솔</li>
+
+                <li>제조자명: Prada SpA
+                </li>
+                <li> 수입자명: (유)프라다 코리아</li>
+
+                <li>특별한 관리가 필요한 제품입니다. 관리법은 정보 를 참고하시기 바랍니다. 품질 보증 기간은 1년입니다. 자세한 사항은 이용 약관 을 참고하시기 바랍니다. 원산지 정보
+                </li>
+            </ul>
+            </p>
+            <br><br>
+            <h3>소재</h3>
+            <br><br>
+            <p>가죽</p>
+        </div>
+
+        <script>
+            function toggleBox() {
+                var box = document.getElementById("myBox");
+                box.classList.toggle("show");
+            }
+        </script>
+
+    </section>
+
+    <!-- <section>
+        <p class="product_1" onclick="toggleBox()">배송 및 반품</p>
+
+        <div id="myBox_1">
+            <h3>제품 상세정보</h3><br><br>
+            <p>포근하게 감싸는 우아한 스타일이 특징인 재킷입니다. 칼라는 셔츠에서 영감을 받았으며 립 조직 니트 커프스로 세련된 대비를 더합니다. 아이코닉한 로고 패치로 룩이 완성됩니다.
+                <br><br>
+                <ul>
+                    <li>제품 코드: MPV879_14F0_F0036_S_OOO</li>
+                    <li>안감 처리</li>
+                    <li>레귤러 핏</li>
+                    <li>전면 지퍼 클로저
+                        </li>
+                    <li>셔츠 스타일 칼라
+                        </li>
+                    <li>스트레이트 슬리브 및 립 조직 니트 커프스
+                        </li>
+                    <li>플랩 포켓
+                        </li>
+                    <li>립 조직 니트 트림 밑단
+                       </li>
+                    <li> 핫 스탬프 로고 패치
+                        </li>
+                    <li>높이: 55cm
+                        </li>
+                    <li>제조자명: Prada SpA
+                       </li>
+                    <li> 수입자명: (유)프라다 코리아</li>
+                    
+                    <li>특별한 관리가 필요한 제품입니다. 관리법은 정보 를 참고하시기 바랍니다. 품질 보증 기간은 1년입니다. 자세한 사항은 이용 약관 을 참고하시기 바랍니다. 원산지 정보
+                    </li>
+                </ul>
+            </p>
+            <br><br>
+            <h3>혼용률</h3>
+            <br><br>
+            <p>염색한 양모피
+                가장자리 91% 원모 8% 나일론 1% 엘라스틴
+                안감 100% 폴리에스터</p>
+        </div>
+
+        <script>
+            function toggleBox() {
+                var box = document.getElementById("myBox_1");
+                box.classList.toggle("show");
+            }
+        </script>
+    </section> -->
+</body>
+
+</html>
